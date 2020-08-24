@@ -22,7 +22,7 @@
         
       <div class="y-home-page  ">
     
-    <nav class="navbar navbar-expand-lg navbar-light py-4 fixed-top y-navbar-positioning ">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 fixed-top y-navbar-positioning my_navbar">
         
         <div class="container" >
   <a class="navbar-brand y-color-brand" href="#">Start Bootstrap</a>
@@ -496,5 +496,19 @@
         <p>Copyright Â© Your Website 2019</p>
         </footer>
         
+
+        <script>
+          $(document).ready(function () {
+              $(window).scroll(function () {
+                let scroll = $(window).scrollTop();
+                if (scroll > 250) {
+                  $(".my_navbar").css("background", "#565555");
+                }
+                else {
+                  $(".my_navbar").css("background", "transparent");
+                }
+              })
+            })
+        </script>
     </body>
 </html>
